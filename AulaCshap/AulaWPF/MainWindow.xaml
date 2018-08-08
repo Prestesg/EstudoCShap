@@ -1,0 +1,28 @@
+﻿<Window x:Class="AulaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AulaWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="Calcular" Content="Calcular" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Margin="45,255,0,0" Background="#FF2A8026" Click="calcular_Click" />
+        <Image Source="C:\Users\1623200\Source\Repos\EstudoCShap\AulaCshap\AulaWPF/hqdefault.jpg" x:Name="ImagemAprovado" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="264" Margin="253,20,0,0"/>
+        <Button x:Name="botao1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="45,93,0,0" Click="num1_Click"/>
+        <Button x:Name="botao2" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="85,93,0,0" Click="num2_Click"/>
+        <Button x:Name="botao3" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="127,93,0,0" Click="num3_Click"/>
+        <Button x:Name="botao4" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="45,131,0,0" Click="num4_Click"/>
+        <Button x:Name="botao5" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="85,131,0,0" Click="num5_Click"/>
+        <Button x:Name="botao6" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="127,131,0,0" Click="num6_Click"/>
+        <Button x:Name="botao7" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="45,166,0,0" Click="num7_Click"/>
+        <Button x:Name="botao8" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="85,166,0,0" Click="num8_Click"/>
+        <Button x:Name="botao9" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="127,166,0,0" Click="num9_Click"/>
+        <Button x:Name="botao0" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="85,202,0,0" Click="num0_Click"/>
+        <Button x:Name="botaovezes" Content="vezes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="173,93,0,0" Click="vezes_Click" />
+        <Button x:Name="botaomais" Content="mais" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="173,131,0,0" Click="mais_Click"/>
+        <Button x:Name="botaomenos" Content="menos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="173,166,0,0" Click="menos_Click"/>
+        <Button x:Name="botaodividido" Content="dividido" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="173,202,0,0" Click="dividido_Click"/>
+        <Label x:Name="PrimeiroArg" Content="" HorizontalAlignment="Left" Margin="45,50,0,0" VerticalAlignment="Top" Width="180"/>
+    </Grid>
+</Window>

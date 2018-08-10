@@ -20,6 +20,9 @@ namespace AulaWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int operacao { get; set; }
+        public double resultado { get; set; }
+        public string memoria { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -97,6 +100,7 @@ namespace AulaWPF
 
         private void vezes_Click(object sender, RoutedEventArgs e)
         {
+            operacao = 1;
             var display = (string)PrimeiroArg.Content;
             display += '*';
             PrimeiroArg.Content = display;
@@ -104,6 +108,7 @@ namespace AulaWPF
 
         private void mais_Click(object sender, RoutedEventArgs e)
         {
+            operacao = 2;
             var display = (string)PrimeiroArg.Content;
             display += '+';
             PrimeiroArg.Content = display;
@@ -111,6 +116,7 @@ namespace AulaWPF
 
         private void menos_Click(object sender, RoutedEventArgs e)
         {
+            operacao = 3;
             var display = (string)PrimeiroArg.Content;
             display += '-';
             PrimeiroArg.Content = display;
@@ -118,6 +124,7 @@ namespace AulaWPF
 
         private void dividido_Click(object sender, RoutedEventArgs e)
         {
+            operacao = 4;
             var display = (string)PrimeiroArg.Content;
             display += '/';
             PrimeiroArg.Content = display;
@@ -126,10 +133,73 @@ namespace AulaWPF
         private void calcular_Click(object sender, RoutedEventArgs e)
         {
             string display = (string)PrimeiroArg.Content;
-            string[] argumentos = display.Split('-','+','*','/');
+            string[] argumentos = display.Split('-','+','*','/','|');
 
-            PrimeiroArg.Content = argumentos[2];
+            double argumento1 = Convert.ToDouble(argumentos[0]);
+            double argumento2 = Convert.ToDouble(argumentos[1]);
+            switch (operacao)
+            {
+                case 1:
+                    resultado = argumento1 * argumento2;
+                    display = Convert.ToString(resultado);
+                    break;
+                case 2:
+                    resultado = argumento1 + argumento2;
+                    display = Convert.ToString(resultado);
+                    break;
+                case 3:
+                    resultado = argumento1 - argumento2;
+                    display = Convert.ToString(resultado);
+                    break;
+                case 4:
+                    resultado = argumento1 / argumento2;
+                    display = Convert.ToString(resultado);
+                    break;
+                case 5:
+                    resultado = Math.Pow(argumento1,argumento2);
+                    display = Convert.ToString(resultado);
+                    break;
+                default:
+                    resultado = argumento1 * argumento2;
+                    display = Convert.ToString(resultado);
+                    break;
+            }
+            PrimeiroArg.Content = display;
+        }
 
+        private void limpar_Click(object sender, RoutedEventArgs e)
+        {
+            PrimeiroArg.Content = "";
+        }
+
+        private void elevar_Click(object sender, RoutedEventArgs e)
+        {
+            operacao = 5;
+            var display = (string)PrimeiroArg.Content;
+            display += '|';
+            PrimeiroArg.Content = display;
+        }
+
+        private void raiz_Click(object sender, RoutedEventArgs e)
+        {
+                var display = (string)PrimeiroArg.Content;
+                double argumento1 = Convert.ToDouble(display);
+                resultado =  Math.Sqrt(argumento1);
+                display = Convert.ToString(resultado);         
+                PrimeiroArg.Content = display;
+        }
+
+        private void memoria_Click(object sender, RoutedEventArgs e)
+        {
+            var display = (string)PrimeiroArg.Content;
+            
+            if (String.IsNullOrEmpty(memoria))
+            {
+                memoria = display;
+            } else
+            {
+                PrimeiroArg.Content += memoria;
+            }
         }
     }
 }

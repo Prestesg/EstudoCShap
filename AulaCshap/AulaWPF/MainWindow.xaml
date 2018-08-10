@@ -23,6 +23,10 @@
         <Button x:Name="botaomais" Content="mais" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="173,131,0,0" Click="mais_Click"/>
         <Button x:Name="botaomenos" Content="menos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="173,166,0,0" Click="menos_Click"/>
         <Button x:Name="botaodividido" Content="dividido" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="173,202,0,0" Click="dividido_Click"/>
-        <Label x:Name="PrimeiroArg" Content="" HorizontalAlignment="Left" Margin="45,50,0,0" VerticalAlignment="Top" Width="180"/>
+        <Label x:Name="PrimeiroArg" Content="" HorizontalAlignment="Left" Margin="45,20,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button x:Name="Limpar" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="45,64,0,0" Height="20" Click="limpar_Click"/>
+        <Button x:Name="botaoraiz" Content="raiz" HorizontalAlignment="Left" Margin="173,64,0,0" VerticalAlignment="Top" Width="52" Click="raiz_Click"/>
+        <Button x:Name="botaoelevar" Content="elevar à" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Margin="116,64,0,0" Click="elevar_Click"/>
+        <Button x:Name="boatomemoria" Content="M" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="85,64,0,0" Click="memoria_Click"/>
     </Grid>
 </Window>
